@@ -11,6 +11,9 @@ const port = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.json());
+app.use("/", (req, res) => {
+  res.status(200).send("Server Connected");
+})
 app.use("/api",router)
 
 app.listen(port, () => {
