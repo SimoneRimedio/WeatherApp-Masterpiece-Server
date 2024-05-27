@@ -19,6 +19,8 @@ const getGeocode = async (req: Request, res: Response): Promise<void> => {
         api_key: apiKey,
       },
     });
+    console.log("search");
+    
     res.json(response.data);
   } catch (error) {
     res.status(500).send({ error: "Failed to fetch geocode data" });

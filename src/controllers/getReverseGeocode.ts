@@ -18,6 +18,7 @@ const getReverseGeocode = async (req: Request, res: Response): Promise<void> => 
           api_key: apiKey,
         },
       });
+      console.log("search 2");
       res.json(response.data);
     } catch (error) {
       res.status(500).send({ error: 'Failed to fetch reverse geocode data' });
