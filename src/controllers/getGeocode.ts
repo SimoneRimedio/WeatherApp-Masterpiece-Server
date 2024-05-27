@@ -4,6 +4,7 @@ import axios from "axios";
 const getGeocode = async (req: Request, res: Response): Promise<void> => {
   const { location } = req.query;
   const apiKey = process.env.GEOCODE_API_KEY;
+  //console.log(apiKey)
 
   if (!location) {
     res.status(400).send({ error: "Location is required" });
@@ -11,6 +12,7 @@ const getGeocode = async (req: Request, res: Response): Promise<void> => {
   }
 
   try {
+
     const response = await axios.get("https://geocode.maps.co/search", {
       params: {
         q: location,

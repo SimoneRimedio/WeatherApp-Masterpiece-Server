@@ -6,7 +6,9 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tsc && node ."
+    "dev": "npx tsc && node .",
+    "build":"tsc",
+    "start":"node ."
   },
   "keywords": [],
   "author": "",
