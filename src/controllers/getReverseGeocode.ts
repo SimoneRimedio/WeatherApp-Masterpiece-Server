@@ -13,6 +13,8 @@ const getReverseGeocode = async (
     return;
   }
 
+  console.log(`GetRevserseGeocode requested :`);
+
   try {
     const response = await axios.get(`https://geocode.maps.co/reverse`, {
       params: {
@@ -22,8 +24,10 @@ const getReverseGeocode = async (
       },
     });
     res.json(response.data);
+    console.log(`   -GetReverseGeocode successful`);
   } catch (error) {
     res.status(500).send({ error: "Failed to fetch reverse geocode data" });
+    console.log(`   -GetReverseGeocode unsuccessful`);
   }
 };
 

@@ -5,7 +5,7 @@ import getReverseGeocode from "../controllers/getReverseGeocode";
 
 const router = Router();
 
-router.get("/getGeocode", getGeocode);
-router.get("/getReverseGeocode", getReverseGeocode);
+router.get("/getgeocode", getGeocode);
+router.get("/getreversegeocode", getReverseGeocode);
 
 export default router;
